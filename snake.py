@@ -3,7 +3,7 @@ import pygame
 import time
 import random
 
-snake_speed = 15
+snake_speed = 10
 
 # Window size
 window_x = 720
@@ -175,13 +175,13 @@ while True:
 
 	# Moving the snake
 	if direction == 'UP':
-		snake_position[1] -= 10
+		snake_position[1] -= 20
 	if direction == 'DOWN':
-		snake_position[1] += 10
+		snake_position[1] += 20
 	if direction == 'LEFT':
-		snake_position[0] -= 10
+		snake_position[0] -= 20
 	if direction == 'RIGHT':
-		snake_position[0] += 10
+		snake_position[0] += 20
 
 	# Snake body growing mechanism
 	# if fruits and snakes collide then scores
