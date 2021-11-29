@@ -84,8 +84,8 @@ snake_body = [[100, 50],
 			[70, 50]
 			]
 # fruit position
-fruit_position = [random.randrange(1, (window_x//10)) * 10,
-				random.randrange(1, (window_y//10)) * 10]
+fruit_position = [random.randrange(1, (window_x//20)) * 20,
+				random.randrange(1, (window_y//20)) * 20]
 
 fruit_spawn = True
 
@@ -187,7 +187,7 @@ while True:
 	# if fruits and snakes collide then scores
 	# will be incremented by 10
 	snake_body.insert(0, list(snake_position))
-	if snake_position[0] == fruit_position[0] and snake_position[1] == fruit_position[1]:
+	if snake_position[0] == fruit_position[0] and snake_position[1] + 10 == fruit_position[1]:
 		score += 1
 		fruit_spawn = False
 	else:
@@ -228,4 +228,3 @@ while True:
 
 	# Frame Per Second /Refres Rate
 	fps.tick(snake_speed)
-
